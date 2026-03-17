@@ -3,6 +3,8 @@
 [![crates.io](https://img.shields.io/crates/v/peasy-document)](https://crates.io/crates/peasy-document)
 [![docs.rs](https://docs.rs/peasy-document/badge.svg)](https://docs.rs/peasy-document)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![crates.io](https://agentgif.com/badge/crates/peasy-document/version.svg)](https://crates.io/crates/peasy-document)
+[![GitHub stars](https://agentgif.com/badge/github/peasytools/peasy-document-rs/stars.svg)](https://github.com/peasytools/peasy-document-rs)
 
 Async Rust client for the [PeasyFormats](https://peasyformats.com) API -- convert between Markdown, JSON, YAML, CSV, and other document formats with tools for format identification, MIME type lookup, and structured data transformation. Built with reqwest, serde, and tokio.
 
