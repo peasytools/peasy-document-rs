@@ -1,23 +1,24 @@
 [package]
 name = "peasy-document"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2021"
 authors = ["PeasyTools"]
-description = "Document conversion library for Rust — convert between Markdown, HTML, CSV, JSON, and YAML formats. Built on pulldown-cmark and serde for safe, fast conversion."
+description = "Rust client for PeasyDocument — document format tools, glossary, and guides API"
 license = "MIT"
 repository = "https://github.com/peasytools/peasy-document-rs"
-homepage = "https://peasytools.com"
+homepage = "https://peasyformats.com"
 documentation = "https://docs.rs/peasy-document"
 readme = "README.md"
-keywords = ["document", "markdown", "csv", "json", "yaml"]
-categories = ["text-processing", "parser-implementations"]
-
+keywords = ["document", "peasy", "api-client", "tools"]
+categories = ["api-bindings"]
 exclude = ["target/", "demo.gif", "demo.tape"]
 
 [dependencies]
-pulldown-cmark = "0.12"
+reqwest = { version = "0.12", features = ["json"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-serde_yaml = "0.9"
-csv = "1"
 thiserror = "2"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+wiremock = "0.6"

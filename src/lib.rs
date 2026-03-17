@@ -1,7 +1,7 @@
-//! peasy-document — Document conversion — Markdown, HTML, CSV, JSON, YAML.
-//!
-//! Document conversion library for Rust — convert between Markdown, HTML, CSV, JSON, and YAML formats.
+pub mod client;
+pub mod error;
+pub mod types;
 
-mod engine;
-
-pub use engine::*;
+pub use client::Client;
+pub use error::{PeasyError, Result};
+pub use types::*;
