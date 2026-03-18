@@ -9,13 +9,13 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let tools = client.list_tools(&Default::default()).await?;
     println!("  Total: {} tools", tools.count);
     for tool in &tools.results {
-        println!("  {} — {}", tool.name, tool.description);
+        println!("  {} — {}", tool.name, tool.display_desc());
     }
 
     // Get a specific tool
     println!("\n=== Markdown to HTML Tool ===");
     let tool = client.get_tool("markdown-to-html").await?;
-    println!("  {}: {}", tool.name, tool.description);
+    println!("  {}: {}", tool.name, tool.display_desc());
 
     // List categories
     println!("\n=== Categories ===");
